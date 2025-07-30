@@ -1,4 +1,4 @@
-# Forking Is Coming: The Legendary Minishell
+# Forking bad: The Legendary Minishell
 
 Welcome to **Forking Is Coming**, the legendary Minishell project from the renowned 42 curriculum!  
 Unleash the power of raw C and dive into the heart of Unix shell programming. This project is not just a shell—it's a rite of passage for aspiring system programmers. 🌟
