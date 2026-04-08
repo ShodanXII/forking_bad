@@ -23,11 +23,16 @@ CC = cc -Wall -Wextra -Werror
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-READLINE_PATH = /users/achat/homebrew/opt/readline
+UNAME := $(shell uname)
 
-READLINE_INCLUDE = -I$(READLINE_PATH)/include
-READLINE_LIB = -L$(READLINE_PATH)/lib -lreadline -lncurses
-
+ifeq ($(UNAME), Darwin)
+	READLINE_PATH = /Users/achat/homebrew/opt/readline
+	READLINE_INCLUDE = -I$(READLINE_PATH)/include
+	READLINE_LIB = -L$(READLINE_PATH)/lib -lreadline -lhistory -lncurses
+else
+	READLINE_INCLUDE =
+	READLINE_LIB = -lreadline -lncurses
+endif
 
 all: $(NAME)
 

@@ -47,6 +47,7 @@ char	*get_user_input(void)
 	const char	*prompt = "\001\033[0;31m\002MINISHELL𒉭 > \001\033[0m\002";
 	char		*input;
 
+	fflush(stdout);
 	input = readline(prompt);
 	if (!input)
 	{
