@@ -27,4 +27,4 @@ RUN make
     
 EXPOSE 7681
     
-CMD ["ttyd", "-W", "-p", "7681", "-i", "0.0.0.0", "./minishell"]
+CMD ["ttyd", "-t", "allow_reconnect=true", "-p", "${PORT:-7681}", "-i", "0.0.0.0", "rlwrap", "./minishell"]
