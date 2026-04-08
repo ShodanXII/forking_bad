@@ -27,4 +27,5 @@ RUN make
     
 EXPOSE 7681
     
-CMD ["ttyd", "-t", "allow_reconnect=true", "-p", "${PORT:-7681}", "-i", "0.0.0.0", "rlwrap", "./minishell"]
+# Dockerfile
+CMD sh -c "ttyd -t allow_reconnect=true -p ${PORT:-7681} -i 0.0.0.0 rlwrap ./minishell"
